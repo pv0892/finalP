@@ -11,7 +11,14 @@ and open the template in the editor.
     </head>
     <body>
         <?php
-        // put your code here
+        
         ?>
+        
+        <form action="index.php" method="POST">
+            
+            <span>Email</span>    <input name="email" type="email" value=""/><br>
+            <span>Password</span>   <input tname="password" ype="password" value=""/> <br>
+            <input type="submit" value="Login"/>
+        </form>
     </body>
 </html>

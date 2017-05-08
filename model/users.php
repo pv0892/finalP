@@ -38,4 +38,26 @@ $statement = $db->prepare($q);
     
     return $f_name;
 }
+
+
+function login($email,$password)
+{
+    
+     global $db;
+   $q="SELECT `email` FROM `user_info` where email='$email' and password='$password'";
+          
+$statement = $db->prepare($q);
+ $statement->execute();
+   $category = $statement->fetch();
+//   print_r(count($statement->fetchAll()));
+    $statement->closeCursor();    
+    $f_name = $category['email'];
+  //  echo $f_name.'<br>';
+//    echo ''.count($statement->fetchAll()).$f_name;
+    
+    return $f_name;
+}
+
+
+
 ?>

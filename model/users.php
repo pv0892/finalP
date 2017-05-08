@@ -19,6 +19,7 @@ $statement = $db->prepare($q);
     $f_name = $category['email'];
   //  echo $f_name.'<br>';
 //    echo ''.count($statement->fetchAll()).$f_name;
+    
     return $f_name;
 }
 ?>

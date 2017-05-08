@@ -8,7 +8,19 @@
 
 require 'model/users.php';
 
-if(isset($_POST['email']))userExists($email)
+if(isset($_POST['email'])){$f=userExists($_POST['email']);
+
+if($f==''){
+    
+    echo 'not found';
+    
+}
+        else { 
+            
+            echo 'user already exists'.$f;
+        }
+
+}
 ?>
 <?php include 'view/header.php'; ?>
 

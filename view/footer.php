@@ -1,7 +1,7 @@
 
 <footer>
     <p class="copyright">
-        &copy; <?php echo date("Y"); ?> My Guitar Shop, Inc.
+        &copy; <?php echo date("Y"); ?> To do list, Inc.
     </p>
 </footer>
 </body>

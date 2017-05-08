@@ -1,9 +1,12 @@
-<?php
+<!DOCTYPE html>
+<html>
+<!-- the head section -->
+<head>
+    <title>My Guitar Shop</title>
+    <link rel="stylesheet" type="text/css"
+          href="/ex_starts/ch05_ex1/main.css">
+</head>
 
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-?>
+<!-- the body section -->
+<body>
+<header><h1>My Guitar Shop</h1></header>

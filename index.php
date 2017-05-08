@@ -11,14 +11,18 @@ and open the template in the editor.
     </head>
     <body>
         <?php
-        
+        if(isset($_POST['email'])&&isset($_POST['password'])){
+            
+        }
         ?>
         
         <form action="index.php" method="POST">
             
             <span>Email</span>    <input name="email" type="email" value=""/><br>
-            <span>Password</span>   <input tname="password" ype="password" value=""/> <br>
+            <span>Password</span>   <input name="password" type="password" value=""/> <br>
             <input type="submit" value="Login"/>
+            
+            <a>Create an account</a>
         </form>
     </body>
 </html>

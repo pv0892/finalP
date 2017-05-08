@@ -12,7 +12,8 @@ if(isset($_POST['email'])){$f=userExists($_POST['email']);
 
 if($f==''){
     
-    echo 'not found';
+ //   echo 'not found';
+    insert($_POST['email'],$_POST['password'],$_POST['firstname'],$_POST['lastname'],$_POST['birthday'],$_POST['phone'],$_POST['gender']);
     
 }
         else { 
@@ -37,7 +38,14 @@ if($f==''){
 <tr>
 <td>E-mail::</td>
 <td><input type ="email" name="email" class="textInput"> </td>
+</tr
+
+<tr>
+<td>Password:</td>
+<td><input type ="password" name="password" class="textInput"> </td>
 </tr>
+<tr>
+
 <tr>
 <td>Birthday::</td>
 <td><input type ="date" name="birthday" class="textInput"> </td>

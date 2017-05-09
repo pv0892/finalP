@@ -16,15 +16,18 @@ $res= getTasksFor($n);
 <div id="taskdue">
     <h1>Tasks due</h1>
     <ul> 
-        <?php foreach ($res as $value) { ?>
+        <?php foreach ($res as $value) { 
+            
+            if($value['status']){
+            ?>
         <li>
-            <section class="tname">Task Name</section>
-                <section class="tdesc">Task Desc</section>
-                    <section class="tdate">Task Date</section>
-                    <section class="ttime">Task Time</section> 
+            <section class="tname"><?php echo $value['taskname']; ?></section>
+                <section class="tdesc"><?php echo $value['taskdesc']; ?></section>
+                    <section class="tdate"><?php echo $value['taskdate']; ?></section>
+                    <section class="ttime"><?php echo $value['tasktime']; ?></section> 
                     
         </li>
-        <?php } ?>
+        <?php }} ?>
     </ul>
 </div>
 

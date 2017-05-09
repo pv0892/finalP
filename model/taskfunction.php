@@ -19,13 +19,14 @@ function addTask($tn,$td,$tdt,$tt,$email)
 function getTasksFor($email)
 {
  global $db;
- $query="SELECT * FROM `task_info` where `email`='a@n.com'";
- echo $query;
+ $query="SELECT * FROM `task_info` where `email`='$email'";
+ //echo $query;
  $statement = $db->prepare($query);
+  $statement->execute();
+
    $category = $statement->fetchAll();
- $statement->execute();
   $statement->closeCursor(); 
-  print_r($category);
+ // print_r($category);
   return $category;
 }
 

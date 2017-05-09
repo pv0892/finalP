@@ -26,7 +26,7 @@ and open the template in the editor.
             }
         }
         ?>
-        
+<center>
         <form action="index.php" method="POST">
             
             <span>Email</span>    <input name="email" type="email" value=""/><br>
@@ -35,4 +35,5 @@ and open the template in the editor.
             <br>
             <a href="register.php">Create an account</a>
         </form>
+</center>
   <?php include 'view/footer.php'; ?>

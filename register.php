@@ -24,7 +24,7 @@ if($f==''){
 }
 ?>
 <?php include 'view/header.php'; ?>
-
+<center>
 <form method="post" action="register.php">
 <table>
 <tr>
@@ -64,5 +64,5 @@ if($f==''){
 </tr>
 </table>
 </form>
-
+</center>
 <?php include 'view/footer.php'; ?>

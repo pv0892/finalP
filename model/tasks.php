@@ -7,9 +7,13 @@
  */
 require 'db.php';
 
-function addTask()
+function addTask($tn,$td,$tdt,$tt,$email)
 {
-    
+  $q="INSERT INTO `task_info` (`taskname`, `taskdesc`, `taskdate`, `tasktime`, `email`, `status`) VALUES ('$tn', '$td', '$tdt', '$tt', '$email', 'Due');"; 
+   $statement = $db->prepare($query);
+   $statement->execute();
+  $statement->closeCursor(); 
+   
 }
 function getTasksFor($email)
 {

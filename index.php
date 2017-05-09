@@ -6,8 +6,18 @@ and open the template in the editor.
 -->
 <?php include 'view/header.php'; ?>
         <?php
+        
+        require 'model/users.php';
         if(isset($_POST['email'])&&isset($_POST['password'])){
-            
+            if(userExists($_POST['email'])==''){
+                echo 'no Account found';
+            }
+            else{
+                $e= login($_POST['email'],$_POST['password']);
+                if($e!='')
+                    echo "<script>window.location.href='tasks.php'</script>";
+                else echo 'password incorrect';
+            }
         }
         ?>
         

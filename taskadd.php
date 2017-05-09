@@ -6,10 +6,12 @@
  * and open the template in the editor.
  */
 
-require 'model/users.php';
+require 'model/taskfunction.php';
 
 if(isset($_POST['taskname'])){
-
+    session_start();
+    $n=$_SESSION['name'];
+    addTask($_POST['taskname'], $_POST['taskdesc'], $_POST['taskdate'], $_POST['tasktime'],$n );
 
 
 }

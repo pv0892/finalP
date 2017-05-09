@@ -14,8 +14,9 @@ function addTask()
 function getTasksFor($email)
 {
  global $db;
- $query="SELECT * FROM `task_info where email=`".$email;
- $statement = $db->prepare($q);
+ $query="SELECT * FROM `task_info` where `email`='a@n.com'";
+ echo $query;
+ $statement = $db->prepare($query);
    $category = $statement->fetchAll();
  $statement->execute();
   $statement->closeCursor(); 

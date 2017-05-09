@@ -6,7 +6,7 @@ and open the template in the editor.
 -->
 <?php include 'view/header.php'; ?>
         <?php
-        
+        session_start();
         require 'model/users.php';
         if(isset($_POST['email'])&&isset($_POST['password'])){
             if(userExists($_POST['email'])==''){
@@ -14,8 +14,14 @@ and open the template in the editor.
             }
             else{
                 $e= login($_POST['email'],$_POST['password']);
-                if($e!='')
+                if($e!=''){
+                    
+                    
+                       $_SESSION["name"] = $e;
+                        $_SESSION["email"] = $_POST['Email'];
+                    
                     echo "<script>window.location.href='tasks.php'</script>";
+                }
                 else echo 'password incorrect';
             }
         }
